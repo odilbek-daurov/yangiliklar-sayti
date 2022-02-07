@@ -60,7 +60,7 @@ def new_detail(request,slug):
 
 
 def tag_list(request, slug):
-    tag = Tag.objects.get(slug=slug)
+    tag = Tag.objects.get(slug = slug)
     news = News.objects.filter(tags=tag)
 
     context = {
