@@ -26,7 +26,7 @@ class News(models.Model):
     img = models.ImageField(upload_to = 'media/')
     views = models.PositiveIntegerField(default=0)
     tags = TaggableManager()
-    city = models.ForeignKey(City, on_delete=models.CASCADE, null=True)
+    city = models.ForeignKey(City, on_delete=models.CASCADE, null=True, blank = True)
     
     def __str__(self) -> str:
         return self.title
